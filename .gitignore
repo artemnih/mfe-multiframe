@@ -42,5 +42,5 @@ testem.log
 Thumbs.db
 shell/.angular/
 shell/dist/
-
 react/dist
+shell/dist/shell/browser/remoteEntry.json
