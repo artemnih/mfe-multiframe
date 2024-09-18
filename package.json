@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "concurrently \"npm run build -w react\" \"npm run build -w remote\" \"npm run build -w shell\"",
     "start": "concurrently \"npm start -w react\" \"npm start -w remote\" \"npm start -w shell\""
   },
   "author": "",

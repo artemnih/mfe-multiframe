@@ -6,7 +6,7 @@ import { loadRemoteModule } from '@angular-architects/native-federation';
   selector: 'app-wrapper',
   standalone: true,
   imports: [CommonModule],
-  template: '',
+  template: '<my-react-component></my-react-component>',
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class WrapperComponent implements OnInit {
@@ -15,7 +15,15 @@ export class WrapperComponent implements OnInit {
   async ngOnInit() {
     loadRemoteModule('mfe1', './MyReactComponent');
 
-    const element = document.createElement('my-react-component');
-    this.elm.nativeElement.appendChild(element);
+
+    // the following code replaces `template: '<my-react-component></my-react-component>',`
+    // if you want to dynamically create the element instead of hardcoding it, read that MFE article for more information
+
+
+
+    // const element = document.createElement('my-react-component');
+    // this.elm.nativeElement.appendChild(element);
+
+    // PS: if this code is used, template can be empty string template: ''
   }
 }
